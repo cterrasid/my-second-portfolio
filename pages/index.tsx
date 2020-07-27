@@ -1,7 +1,12 @@
 import Head from "next/head";
 import Layout from "../components/Layout";
+import Tag from "../components/Tag";
 
 export default function Home() {
+  const handleClick = () => {
+    console.log("cambiar");
+  };
+  // creo un hook que cambie el texto "Frontend"
   return (
     <Layout>
       <Head>
@@ -11,9 +16,15 @@ export default function Home() {
 
       <main>
         <section>
-          <h2>¡Hola!, soy Clarette Terrasi Díaz,</h2>
-          <h1>Frontend Developer</h1>
-          <h3>y si no te gusta...</h3>
+          <Tag name="h2">
+            <h2>¡Hola!, soy Clarette Terrasi Díaz,</h2>
+          </Tag>
+          <Tag name="h1">
+            <h1>Frontend Developer</h1>
+          </Tag>
+          <Tag name="h3">
+            <h3 onClick={handleClick}>y si no te gusta...</h3>
+          </Tag>
         </section>
         <img src="/clarette-mobile.png" alt="Imagen de Clarette" />
       </main>
@@ -38,7 +49,7 @@ export default function Home() {
           justify-content: flex-start;
           align-items: flex-start;
           align-self: flex-end;
-          width: 60%;
+          width: 50%;
           padding: 30px 40px 0 0;
         }
 
