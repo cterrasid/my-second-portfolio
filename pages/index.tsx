@@ -77,6 +77,17 @@ export default function Home() {
           animation: vibrate 100ms infinite linear;
         }
 
+        h3::before {
+          animation: luminance 500ms infinite linear;
+          width: 100%;
+          content: "y si no te gusta...";
+          color: transparent;
+          text-shadow: 0 0 5px rgba(224, 224, 224, 0.1);
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+
         img {
           width: 75%;
           position: absolute;
@@ -101,6 +112,15 @@ export default function Home() {
           }
           100% {
             transform: rotate(0deg);
+          }
+        }
+
+        @keyframes luminance {
+          from {
+            color: #d1cfcf;
+          }
+          to {
+            color: #bdbbbb;
           }
         }
       `}</style>
