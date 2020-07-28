@@ -17,7 +17,9 @@ export default function Home() {
       <main>
         <section>
           <Tag name="h2">
-            <h2>¡Hola!, soy Clarette Terrasi Díaz,</h2>
+            <h2>
+              ¡Hola!, soy <br />Clarette Terrasi Díaz,
+            </h2>
           </Tag>
           <Tag name="h1">
             <h1>Frontend Developer</h1>
@@ -49,7 +51,7 @@ export default function Home() {
           justify-content: flex-start;
           align-items: flex-start;
           align-self: flex-end;
-          width: 50%;
+          width: 70%;
           padding: 30px 40px 0 0;
         }
 
@@ -62,7 +64,6 @@ export default function Home() {
           margin: 0;
           font-size: 12px;
           font-weight: normal;
-          width: 50%;
         }
 
         h3 {
@@ -73,10 +74,7 @@ export default function Home() {
           font-weight: normal;
           align-self: flex-end;
           cursor: pointer;
-          animation-name: vibrate;
-          animation-duration: 100ms;
-          animation-iteration-count: infinite;
-          animation-timing-function: linear;
+          animation: vibrate 100ms infinite linear;
         }
 
         img {
@@ -100,7 +98,6 @@ export default function Home() {
           }
           10% {
             transform: rotate(3deg);
-            color: #aaa8a8;
           }
           100% {
             transform: rotate(0deg);
