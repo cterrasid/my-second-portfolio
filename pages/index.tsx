@@ -1,12 +1,13 @@
 import Head from "next/head";
 import Layout from "../components/Layout";
 import Tag from "../components/Tag";
+import BackgroundImage from "../components/BackgroundImage";
 
 export default function Home() {
   const handleClick = () => {
     console.log("cambiar");
   };
-  // creo un hook que cambie el texto "Frontend"
+
   return (
     <Layout>
       <Head>
@@ -28,7 +29,7 @@ export default function Home() {
             <h3 onClick={handleClick}>y si no te gusta...</h3>
           </Tag>
         </section>
-        <img src="/clarette-mobile.png" alt="Imagen de Clarette" />
+        <BackgroundImage />
       </main>
 
       <style jsx>{`
@@ -94,13 +95,6 @@ export default function Home() {
           bottom: 0;
           left: 0;
           z-index: 1;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
         }
 
         @keyframes vibrate {
