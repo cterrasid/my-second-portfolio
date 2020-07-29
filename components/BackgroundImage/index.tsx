@@ -33,9 +33,10 @@ export default function BackgroundImage() {
       </div>
       <style jsx>{`
         section {
-          height: 400px;
+          height: 100vh;
           width: 100%;
-          position: relative;
+          display: flex;
+          align-items: flex-end;
         }
 
         div.body {
