@@ -1,12 +1,13 @@
 import Head from "next/head";
 import Layout from "../components/Layout";
 import Tag from "../components/Tag";
+import BackgroundImage from "../components/BackgroundImage";
 
 export default function Home() {
   const handleClick = () => {
     console.log("cambiar");
   };
-  // creo un hook que cambie el texto "Frontend"
+
   return (
     <Layout>
       <Head>
@@ -17,7 +18,9 @@ export default function Home() {
       <main>
         <section>
           <Tag name="h2">
-            <h2>¡Hola!, soy Clarette Terrasi Díaz,</h2>
+            <h2>
+              ¡Hola!, soy <br />Clarette Terrasi Díaz,
+            </h2>
           </Tag>
           <Tag name="h1">
             <h1>Frontend Developer</h1>
@@ -26,7 +29,7 @@ export default function Home() {
             <h3 onClick={handleClick}>y si no te gusta...</h3>
           </Tag>
         </section>
-        <img src="/clarette-mobile.png" alt="Imagen de Clarette" />
+        <BackgroundImage />
       </main>
 
       <style jsx>{`
@@ -49,7 +52,7 @@ export default function Home() {
           justify-content: flex-start;
           align-items: flex-start;
           align-self: flex-end;
-          width: 50%;
+          width: 70%;
           padding: 30px 40px 0 0;
         }
 
@@ -62,7 +65,6 @@ export default function Home() {
           margin: 0;
           font-size: 12px;
           font-weight: normal;
-          width: 50%;
         }
 
         h3 {
@@ -73,10 +75,18 @@ export default function Home() {
           font-weight: normal;
           align-self: flex-end;
           cursor: pointer;
-          animation-name: vibrate;
-          animation-duration: 100ms;
-          animation-iteration-count: infinite;
-          animation-timing-function: linear;
+          animation: vibrate 100ms infinite linear;
+        }
+
+        h3::before {
+          animation: luminance 500ms infinite linear;
+          width: 100%;
+          content: "y si no te gusta...";
+          color: transparent;
+          text-shadow: 0 0 5px rgba(224, 224, 224, 0.1);
+          position: absolute;
+          left: 0;
+          top: 0;
         }
 
         img {
@@ -87,23 +97,24 @@ export default function Home() {
           z-index: 1;
         }
 
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-
         @keyframes vibrate {
           0% {
             transform: rotate(0deg);
           }
           10% {
             transform: rotate(3deg);
-            color: #aaa8a8;
           }
           100% {
             transform: rotate(0deg);
+          }
+        }
+
+        @keyframes luminance {
+          from {
+            color: #d1cfcf;
+          }
+          to {
+            color: #bdbbbb;
           }
         }
       `}</style>
