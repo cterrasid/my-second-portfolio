@@ -34,6 +34,13 @@ export default function Tag({ name, children }) {
           align-self: flex-end;
           margin-left: 5px;
         }
+
+        @media all and (min-width: 768px) {
+          section:last-child {
+            align-self: flex-end;
+            margin-right: 15px;
+          }
+        }
       `}</style>
     </section>
   );
