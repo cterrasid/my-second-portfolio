@@ -1,6 +1,9 @@
-import { useState, useEffect, useRef, Fragment } from "react";
+import { useRef } from "react";
+import useWindowSize from "../../hooks/useWindowsSize";
 
 export default function BackgroundImage() {
+  const { isMobile, isTablet } = useWindowSize();
+
   const eyeLeftRef = useRef();
   const eyeRightRef = useRef();
 
@@ -14,14 +17,21 @@ export default function BackgroundImage() {
     eyeRight.style.left = x;
     eyeLeft.style.top = y;
     eyeRight.style.top = y;
-    eyeRight.style.transform = "translate(-" + x + ", -" + y + ")";
-    eyeLeft.style.transform = "translate(-" + x + ", -" + y + ")";
+    eyeRight.style.transform = `translate(-${x}, -${y})`;
+    eyeLeft.style.transform = `translate(-${x}, -${y})`;
   };
 
   return (
     <section onMouseMove={handleMouseMove}>
       <div className="body">
-        <img src="/without-eyes.png" alt="Imagen de Clarette" />
+        <img
+          src={
+            isMobile || isTablet
+              ? "/without-eyes.png"
+              : "/without-eyes-complete.png"
+          }
+          alt="Imagen de Clarette"
+        />
         <div className="eyes">
           <div className="eye">
             <div className="left ball" ref={eyeLeftRef} />
@@ -63,13 +73,17 @@ export default function BackgroundImage() {
 
         div.eye {
           width: 26px;
-          height: 30px;
-          background-color: #bdbbbb;
+          height: 23px;
+          background: #c3c1c1;
+          background: -webkit-radial-gradient(center, #c3c1c1, #8c8c8c);
+          background: -moz-radial-gradient(center, #c3c1c1, #8c8c8c);
+          background: radial-gradient(ellipse at center, #c3c1c1, #8c8c8c);
           display: inline-block;
           border-radius: 50%;
           position: relative;
           overflow: hidden;
         }
+
         div.eye:first-child {
           margin-bottom: 2px;
         }
@@ -79,17 +93,11 @@ export default function BackgroundImage() {
         }
 
         div.left {
-          background: transparent url("/left-eye.png") no-repeat center center;
-          background-size: cover;
-          height: 10px;
-          width: 11px;
+          background: black url("/left-eye.png") no-repeat center center;
         }
 
         div.right {
-          background: transparent url("/right-eye.png") no-repeat center center;
-          background-size: cover;
-          height: 9px;
-          width: 11px;
+          background: black url("/right-eye.png") no-repeat center center;
         }
 
         div.ball {
@@ -97,6 +105,45 @@ export default function BackgroundImage() {
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
+          background-size: cover;
+          height: 11px;
+          width: 11px;
+          border-radius: 50%;
+        }
+        @media all and (min-width: 768px) {
+          div.eyes {
+            top: 113px;
+          }
+
+          div.eye {
+            height: 15px;
+          }
+        }
+
+        @media all and (min-width: 1024px) {
+          div.body {
+            height: 500px;
+            width: 513px;
+          }
+
+          div.eyes {
+            width: 110px;
+            top: 130px;
+            left: 210px;
+          }
+
+          div.eye {
+            height: 23px;
+          }
+
+          div.eye:last-child {
+            margin-left: 45px;
+          }
+
+          div.ball {
+            height: 14px;
+            width: 14px;
+          }
         }
       `}</style>
     </section>
