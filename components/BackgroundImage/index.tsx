@@ -1,9 +1,8 @@
 import { useRef } from "react";
-import useWindowSize from "../../hooks/useWindowsSize";
+import useImageByDevice from "../../hooks/useImageByDevice";
 
 export default function BackgroundImage() {
-  const { isMobile, isTablet } = useWindowSize();
-
+  const image = useImageByDevice();
   const eyeLeftRef = useRef();
   const eyeRightRef = useRef();
 
@@ -24,14 +23,7 @@ export default function BackgroundImage() {
   return (
     <section onMouseMove={handleMouseMove}>
       <div className="body">
-        <img
-          src={
-            isMobile || isTablet
-              ? "/without-eyes.png"
-              : "/without-eyes-complete.png"
-          }
-          alt="Imagen de Clarette"
-        />
+        <img src={image} alt="Imagen de Clarette" />
         <div className="eyes">
           <div className="eye">
             <div className="left ball" ref={eyeLeftRef} />

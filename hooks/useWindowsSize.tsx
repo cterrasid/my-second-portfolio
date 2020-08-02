@@ -33,5 +33,5 @@ export default function useWindowSize() {
   const isTablet = windowWidth >= 768 && windowWidth < 1024;
   const isLaptop = windowWidth >= 1024;
 
-  return { isMobile, isTablet, isLaptop };
+  return { isMobile, isTablet, isLaptop, windowWidth };
 }
