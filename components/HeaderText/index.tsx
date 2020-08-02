@@ -1,9 +1,7 @@
 import Tag from "../Tag";
-import useWindowSize from "../../hooks/useWindowsSize";
+import { fonts, colors } from "../../styles/theme";
 
 export default function HeaderText() {
-  const { isMobile, isTablet } = useWindowSize();
-
   const handleClick = () => {
     console.log("cambiar");
   };
@@ -11,9 +9,7 @@ export default function HeaderText() {
   return (
     <section>
       <Tag name="h2">
-        <h2>
-          ¡Hola!, soy{isMobile || isTablet ? <br /> : " "}Clarette Terrasi Díaz,
-        </h2>
+        <h2>¡Hola!, soy Clarette Terrasi Díaz,</h2>
       </Tag>
       <Tag name="h1">
         <h1>Frontend Developer</h1>
@@ -43,12 +39,13 @@ export default function HeaderText() {
           margin: 0;
           font-size: 12px;
           font-weight: normal;
+          width: 70px;
         }
 
         h3 {
           margin: 0;
-          font-family: Damion, cursive;
-          color: #bdbbbb;
+          font-family: ${fonts.secondary};
+          color: ${colors.secondary};
           font-size: 14px;
           font-weight: normal;
           align-self: flex-end;
@@ -104,6 +101,7 @@ export default function HeaderText() {
           h2 {
             font-size: 15px;
             align-self: flex-start;
+            width: unset;
           }
 
           h3 {
