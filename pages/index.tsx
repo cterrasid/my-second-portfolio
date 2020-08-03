@@ -2,6 +2,7 @@ import Head from "next/head";
 import Layout from "../components/Layout";
 import BackgroundImage from "../components/BackgroundImage";
 import HeaderText from "../components/HeaderText";
+import DotsMenu from "../components/DotsMenu";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <main>
         <HeaderText />
         <BackgroundImage />
+        <DotsMenu />
       </main>
 
       <style jsx>{`
