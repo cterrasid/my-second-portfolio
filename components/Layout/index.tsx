@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { fonts } from "../../styles/theme";
+import { globalStyles } from "./styles";
 
 export default function Layout({ children }) {
   return (
@@ -8,18 +8,7 @@ export default function Layout({ children }) {
         {children}
       </div>
 
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: ${fonts.base};
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
+      <style jsx global>{globalStyles}</style>
     </Fragment>
   );
 }
