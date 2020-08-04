@@ -4,13 +4,14 @@ import { colors } from "../../styles/theme";
 export default css`
   section {
     position: absolute;
-    right: 5px;
-    bottom: 5px;
+    right: 10%;
+    bottom: 65%;
     cursor: pointer;
     width: 30px;
     height: 30px;
     display: grid;
     place-items: center;
+    z-index: 2;
   }
 
   span {
@@ -45,24 +46,26 @@ export default css`
     animation-delay: 2s;
   }
 
-  span:hover {
-    animation-duration: 0s;
-    width: 75%;
-    height: 75%;
-
-    &:after,
-    &:before {
+  section:hover {
+    span {
       animation-duration: 0s;
-      width: 0%;
-      height: 0%;
-  }
+      width: 40%;
+      height: 40%;
 
-    &:after {
-      transform: translateX(-8px);
-    }
+      &:after,
+      &:before {
+        animation-duration: 0s;
+        width: 0%;
+        height: 0%;
+      }
 
-    &:before {
-      transform: translateX(8px);
+      &:after {
+        transform: translate(-8px, initial);
+      }
+
+      &:before {
+        transform: translate(8px, initial);
+      }
     }
   }
 
