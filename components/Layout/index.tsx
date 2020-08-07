@@ -1,14 +1,14 @@
-import { Fragment } from "react";
-import { globalStyles } from "./styles";
+import { Fragment } from 'react'
+import { globalStyles } from './styles'
 
 export default function Layout({ children }) {
   return (
     <Fragment>
-      <div>
-        {children}
-      </div>
+      <div>{children}</div>
 
-      <style jsx global>{globalStyles}</style>
+      <style jsx global>
+        {globalStyles}
+      </style>
     </Fragment>
-  );
+  )
 }

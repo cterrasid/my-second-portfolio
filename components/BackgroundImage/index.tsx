@@ -7,10 +7,10 @@ export default function BackgroundImage() {
   const eyeLeftRef = useRef();
   const eyeRightRef = useRef();
 
-  const handleMouseMove = e => {
+  const handleMouseMove = (e) => {
     const { clientX, clientY } = e.nativeEvent;
-    const x = clientX * 100 / window.innerWidth + "%";
-    const y = clientY * 100 / window.innerHeight + "%";
+    const x = (clientX * 100) / window.innerWidth + "%";
+    const y = (clientY * 100) / window.innerHeight + "%";
     const eyeLeft: any = eyeLeftRef.current;
     const eyeRight: any = eyeRightRef.current;
     eyeLeft.style.left = x;

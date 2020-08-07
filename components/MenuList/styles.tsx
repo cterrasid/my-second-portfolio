@@ -1,6 +1,6 @@
-import css from "styled-jsx/css";
+import css from 'styled-jsx/css'
 
-const items = ["Inicio", "Sobre mi", "Competencias", "Proyectos"];
+const items = ['Inicio', 'Sobre mi', 'Competencias', 'Proyectos']
 
 export default css`
   nav {
@@ -22,4 +22,4 @@ export default css`
     text-transform: uppercase;
     font-size: 8px;
   }
-`;
+`

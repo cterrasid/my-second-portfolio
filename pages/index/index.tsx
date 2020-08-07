@@ -1,8 +1,8 @@
-import Head from "next/head";
-import Layout from "../../components/Layout";
-import BackgroundImage from "../../components/BackgroundImage";
-import HeaderText from "../../components/HeaderText";
-import DotsMenu from "../../components/DotsMenu";
+import Head from 'next/head'
+import Layout from '../../components/Layout'
+import BackgroundImage from '../../components/BackgroundImage'
+import HeaderText from '../../components/HeaderText'
+import DotsMenu from '../../components/DotsMenu'
 import styles from './styles'
 
 export default function Home() {
@@ -19,7 +19,6 @@ export default function Home() {
         <DotsMenu />
       </main>
       <style jsx>{styles}</style>
-
     </Layout>
-  );
+  )
 }
