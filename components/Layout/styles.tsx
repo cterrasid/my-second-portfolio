@@ -12,4 +12,10 @@ export const globalStyles = css.global`
     * {
       box-sizing: border-box;
     }
+
+    div.page-wrapper {
+      margin: 0 25px;
+      height: 100%;
+      width:100%;
+    }
 `;

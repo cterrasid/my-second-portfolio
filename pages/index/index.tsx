@@ -2,7 +2,7 @@ import Head from "next/head";
 import Layout from "../../components/Layout";
 import BackgroundImage from "../../components/BackgroundImage";
 import HeaderText from "../../components/HeaderText";
-import Menu from "../../components/Menu";
+import DotsMenu from "../../components/DotsMenu";
 import styles from './styles'
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
       <main>
         <HeaderText />
         <BackgroundImage />
-        <Menu />
+        <DotsMenu />
       </main>
       <style jsx>{styles}</style>
 

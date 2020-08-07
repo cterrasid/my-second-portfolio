@@ -1,5 +1,5 @@
 import css from "styled-jsx/css";
-import { colors } from "../../styles/theme";
+import { colors, breakpoints } from "../../styles/theme";
 
 export default css`
   section {
@@ -12,6 +12,12 @@ export default css`
     display: grid;
     place-items: center;
     z-index: 2;
+
+    @media all and (min-width: ${breakpoints.tablet}) {
+      bottom: unset;
+      top: 10%;
+      right: 5%;
+    }
   }
 
   span {

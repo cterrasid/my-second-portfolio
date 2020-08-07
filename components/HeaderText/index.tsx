@@ -17,8 +17,9 @@ export default function HeaderText() {
       <Tag name="h3">
         <h3 onClick={handleClick}>y si no te gusta...</h3>
       </Tag>
-
-      <style jsx>{styles}</style>
+      <style jsx>
+        {styles}
+      </style>
     </section>
   );
 }

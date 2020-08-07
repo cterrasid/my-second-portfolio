@@ -5,8 +5,14 @@ export const fonts = {
 };
 
 export const colors = {
-  primary: "",
-  secondary: "#bdbbbb",
+  grey: "#bdbbbb",
+  beige: "#d8d0bb",
   whitePure: "#ffffff",
   blackPure: "#000000"
+};
+
+export const breakpoints = {
+  tablet: "768px",
+  laptop: "1024px",
+  desktop: "1440px"
 };

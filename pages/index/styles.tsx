@@ -16,6 +16,7 @@ export default css`
         rgba(187, 182, 175, 1) 0%,
         rgba(241, 235, 227, 1) 18%
       );
+      padding: 50px 50px 0 0;
       z-index: 0;
     }
 

@@ -1,3 +1,5 @@
+import styles from './styles';
+
 export default function Tag({ name, children }) {
   return (
     <section>
@@ -7,41 +9,7 @@ export default function Tag({ name, children }) {
       </>
       <span>{`</${name}>`}</span>
 
-      <style jsx>{`
-        section {
-          display: grid;
-          grid-template-areas: "open content close";
-        }
-
-        section:nth-child(2) {
-          grid-area: "content";
-        }
-
-        span {
-          color: #d8d0bb;
-          font-family: Damion;
-          font-size: 12px;
-        }
-
-        span:first-child {
-          grid-area: "open";
-          align-self: flex-start;
-          margin-right: 5px;
-        }
-
-        span:last-child {
-          grid-area: "close";
-          align-self: flex-end;
-          margin-left: 5px;
-        }
-
-        @media all and (min-width: 768px) {
-          section:last-child {
-            align-self: flex-end;
-            margin-right: 15px;
-          }
-        }
-      `}</style>
+      <style jsx>{styles}</style>
     </section>
   );
 }
