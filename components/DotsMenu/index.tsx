@@ -1,36 +1,27 @@
-import { Fragment, useState } from "react";
-import styles from "./styles";
+import { Fragment, useState, useEffect } from 'react'
+import styles from './styles'
+import MenuList from '../MenuList'
 
 export default function DotsMenu() {
-  const [isHover, setIsHover] = useState(false);
-  const [isClicked, setIsClicked] = useState(false);
+  const [isHover, setIsHover] = useState(false)
+  const [show, setShow] = useState(false)
+  const [growUp, setGrowUp] = useState(false)
 
   const onClick = () => {
-    console.log("click");
-    setIsClicked(true);
-  };
+    setShow(!show)
+  }
 
   const onMouseMove = () => {
-    console.log("hover");
-    setIsHover(true);
-  };
+    setIsHover(true)
+  }
 
-  const setHoverTransition = (height: string, width: string) => {
-    const grow = {
-      stop: "0s",
-      height: height,
-      width: width
-    };
-
-    return grow;
-  };
-  console.log(setHoverTransition("75%", "75%"));
   return (
     <Fragment>
       <section onClick={onClick}>
         <span onMouseMove={onMouseMove} />
       </section>
+      {show ? <MenuList /> : false}
       <style jsx>{styles}</style>
     </Fragment>
-  );
+  )
 }

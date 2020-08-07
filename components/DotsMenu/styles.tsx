@@ -1,5 +1,5 @@
-import css from "styled-jsx/css";
-import { colors } from "../../styles/theme";
+import css from 'styled-jsx/css'
+import { colors, breakpoints } from '../../styles/theme'
 
 export default css`
   section {
@@ -12,6 +12,12 @@ export default css`
     display: grid;
     place-items: center;
     z-index: 2;
+
+    @media all and (min-width: ${breakpoints.tablet}) {
+      bottom: unset;
+      top: 10%;
+      right: 5%;
+    }
   }
 
   span {
@@ -27,13 +33,13 @@ export default css`
   span:after,
   span:before {
     position: absolute;
-    content: "";
+    content: '';
     background-color: ${colors.blackPure};
     border-radius: 50%;
     height: 4px;
     width: 4px;
     animation: wave 4s linear infinite;
-    transition: transform 1s ease-out, height 1s, width .1s;
+    transition: transform 1s ease-out, height 1s, width 0.1s;
   }
 
   span:after {
@@ -79,4 +85,4 @@ export default css`
       transform: translateY(-2px);
     }
   }
-`;
+`

@@ -1,10 +1,10 @@
-import Tag from "../Tag";
-import styles from "./styles";
+import Tag from '../Tag'
+import styles from './styles'
 
 export default function HeaderText() {
   const handleClick = () => {
-    console.log("cambiar");
-  };
+    console.log('cambiar')
+  }
 
   return (
     <section>
@@ -17,8 +17,7 @@ export default function HeaderText() {
       <Tag name="h3">
         <h3 onClick={handleClick}>y si no te gusta...</h3>
       </Tag>
-
       <style jsx>{styles}</style>
     </section>
-  );
+  )
 }
