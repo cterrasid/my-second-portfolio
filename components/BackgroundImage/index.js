@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import useImageByDevice from "../../hooks/useImageByDevice";
+import useImageByDevice from "hooks/useImageByDevice";
 import styles from "./styles";
 
 export default function BackgroundImage() {
@@ -11,8 +11,8 @@ export default function BackgroundImage() {
     const { clientX, clientY } = e.nativeEvent;
     const x = (clientX * 100) / window.innerWidth + "%";
     const y = (clientY * 100) / window.innerHeight + "%";
-    const eyeLeft: any = eyeLeftRef.current;
-    const eyeRight: any = eyeRightRef.current;
+    const eyeLeft = eyeLeftRef.current;
+    const eyeRight = eyeRightRef.current;
     eyeLeft.style.left = x;
     eyeRight.style.left = x;
     eyeLeft.style.top = y;

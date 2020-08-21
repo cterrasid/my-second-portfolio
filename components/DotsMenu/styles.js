@@ -1,5 +1,5 @@
-import css from 'styled-jsx/css'
-import { colors, breakpoints } from '../../styles/theme'
+import css from "styled-jsx/css";
+import { colors, breakpoints } from "../../styles/theme";
 
 export default css`
   section {
@@ -12,12 +12,6 @@ export default css`
     display: grid;
     place-items: center;
     z-index: 2;
-
-    @media all and (min-width: ${breakpoints.tablet}) {
-      bottom: unset;
-      top: 10%;
-      right: 5%;
-    }
   }
 
   span {
@@ -33,7 +27,7 @@ export default css`
   span:after,
   span:before {
     position: absolute;
-    content: '';
+    content: "";
     background-color: ${colors.blackPure};
     border-radius: 50%;
     height: 4px;
@@ -52,26 +46,31 @@ export default css`
     animation-delay: 2s;
   }
 
-  section:hover {
-    span {
-      animation-duration: 0s;
-      width: 40%;
-      height: 40%;
+  section:hover span {
+    animation-duration: 0s;
+    width: 40%;
+    height: 40%;
+  }
 
-      &:after,
-      &:before {
-        animation-duration: 0s;
-        width: 0%;
-        height: 0%;
-      }
+  section:hover span:after span:before {
+    animation-duration: 0s;
+    width: 0%;
+    height: 0%;
+  }
 
-      &:after {
-        transform: translate(-8px, initial);
-      }
+  section:hover span:after {
+    transform: translate(-8px, initial);
+  }
 
-      &:before {
-        transform: translate(8px, initial);
-      }
+  section:hover span:before {
+    transform: translate(8px, initial);
+  }
+
+  @media all and (min-width: ${breakpoints.tablet}) {
+    section {
+      bottom: unset;
+      top: 10%;
+      right: 5%;
     }
   }
 
@@ -85,4 +84,4 @@ export default css`
       transform: translateY(-2px);
     }
   }
-`
+`;
