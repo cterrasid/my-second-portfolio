@@ -1,5 +1,5 @@
-import css from 'styled-jsx/css'
-import { fonts } from '../../styles/theme'
+import css from "styled-jsx/css";
+import { fonts } from "../../styles/theme";
 
 export const globalStyles = css.global`
   html,
@@ -18,4 +18,4 @@ export const globalStyles = css.global`
     height: 100%;
     width: 100%;
   }
-`
+`;

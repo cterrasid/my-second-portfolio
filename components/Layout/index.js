@@ -1,5 +1,5 @@
-import { Fragment } from 'react'
-import { globalStyles } from './styles'
+import { Fragment } from "react";
+import { globalStyles } from "./styles";
 
 export default function Layout({ children }) {
   return (
@@ -10,5 +10,5 @@ export default function Layout({ children }) {
         {globalStyles}
       </style>
     </Fragment>
-  )
+  );
 }
