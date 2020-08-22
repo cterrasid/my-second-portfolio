@@ -1,5 +1,5 @@
-import css from "styled-jsx/css";
-import { colors, breakpoints } from "../../styles/theme";
+import css from 'styled-jsx/css'
+import { colors, breakpoints } from '../../styles/theme'
 
 export default css`
   section {
@@ -27,7 +27,7 @@ export default css`
   span:after,
   span:before {
     position: absolute;
-    content: "";
+    content: '';
     background-color: ${colors.blackPure};
     border-radius: 50%;
     height: 4px;
@@ -84,4 +84,4 @@ export default css`
       transform: translateY(-2px);
     }
   }
-`;
+`

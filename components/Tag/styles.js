@@ -1,14 +1,14 @@
-import css from "styled-jsx/css";
-import { fonts, colors, breakpoints } from "../../styles/theme";
+import css from 'styled-jsx/css'
+import { fonts, colors, breakpoints } from '../../styles/theme'
 
 export default css`
   section {
     display: grid;
-    grid-template-areas: "open content close";
+    grid-template-areas: 'open content close';
   }
 
   section:nth-child(2) {
-    grid-area: "content";
+    grid-area: 'content';
   }
 
   span {
@@ -18,13 +18,13 @@ export default css`
   }
 
   span:first-child {
-    grid-area: "open";
+    grid-area: 'open';
     align-self: flex-start;
     margin-right: 5px;
   }
 
   span:last-child {
-    grid-area: "close";
+    grid-area: 'close';
     align-self: flex-end;
     margin-left: 5px;
   }
@@ -41,4 +41,4 @@ export default css`
       font-size: 18px;
     }
   }
-`;
+`

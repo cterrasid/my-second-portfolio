@@ -1,5 +1,5 @@
-import css from "styled-jsx/css";
-import { fonts, colors, breakpoints } from "styles/theme";
+import css from 'styled-jsx/css'
+import { fonts, colors, breakpoints } from 'styles/theme'
 
 export default css`
   section {
@@ -82,7 +82,7 @@ export default css`
       right: 20%;
       max-width: 690px;
     }
-    
+
     h1 {
       font-size: 60px;
     }
@@ -114,4 +114,4 @@ export default css`
       animation-timing-function: cubic-bezier(0.45, 0.84, 0.75, 0.99);
     }
   }
-`;
+`
