@@ -9,7 +9,7 @@ export const colors = {
   beige: '#d8d0bb',
   whitePure: '#ffffff',
   blackPure: '#000000',
-  blood: '#c10e0e',
+  blood: '#cc2626',
   aqua: '#05889c',
   eggplant: '#610f96',
 }
