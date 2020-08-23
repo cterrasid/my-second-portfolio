@@ -1,5 +1,5 @@
 import css from 'styled-jsx/css'
-import { fonts } from '../../styles/theme'
+import { fonts, colors } from '../../styles/theme'
 
 export const globalStyles = css.global`
   html,
@@ -7,6 +7,7 @@ export const globalStyles = css.global`
     padding: 0;
     margin: 0;
     font-family: ${fonts.base};
+    background: ${colors.beige};
   }
 
   * {
@@ -17,5 +18,9 @@ export const globalStyles = css.global`
     margin: 0 25px;
     height: 100%;
     width: 100%;
+  }
+
+  a {
+    color: ${colors.blackPure};
   }
 `

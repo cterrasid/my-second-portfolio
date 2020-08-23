@@ -1,10 +1,16 @@
-import { Fragment, useState } from 'react'
+import { Fragment, useState, useEffect } from 'react'
 import { useSpring, animated } from 'react-spring'
 import MenuList from 'components/MenuList'
 import { colors, breakpoints } from 'styles/theme'
+import useWindowSize from 'hooks/useWindowsSize'
 
 export default function DotMenu() {
   const [show, setShow] = useState(false)
+  const { windowWidth, isLaptop } = useWindowSize()
+
+  useEffect(() => {
+    isLaptop && setShow(true)
+  }, [windowWidth])
 
   const props = useSpring({
     transform: `scale(${show ? 1.5 : 1})`,
@@ -22,9 +28,11 @@ export default function DotMenu() {
 
   return (
     <Fragment>
-      <section onClick={onClick}>
-        <animated.span className="span" style={props} />
-      </section>
+      {!isLaptop && (
+        <section onClick={onClick}>
+          <animated.span className="span" style={props} />
+        </section>
+      )}
       {show ? <MenuList /> : false}
       <style jsx>{`
         section {
