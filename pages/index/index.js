@@ -1,9 +1,9 @@
-import { Fragment } from "react";
-import Head from "next/head";
-import BackgroundImage from "components/BackgroundImage";
-import HeaderText from "components/HeaderText";
-import DotsMenu from "components/DotsMenu";
-import styles from "./styles";
+import { Fragment } from 'react'
+import Head from 'next/head'
+import BackgroundImage from 'components/BackgroundImage'
+import HeaderText from 'components/HeaderText'
+import DotMenu from 'components/DotMenu'
+import styles from './styles'
 
 export default function Home() {
   return (
@@ -16,9 +16,9 @@ export default function Home() {
       <main>
         <HeaderText />
         <BackgroundImage />
-        <DotsMenu />
+        <DotMenu />
       </main>
       <style jsx>{styles}</style>
     </Fragment>
-  );
+  )
 }
