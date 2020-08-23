@@ -1,17 +1,19 @@
 export const fonts = {
-  base:
-    'Mulish, system-ui, -apple-system, BlinkMacSystemFont, Ubuntu, sans-serif',
+  // base:
+  //   'Mulish, system-ui, -apple-system, BlinkMacSystemFont, Ubuntu, sans-serif',
+  base: 'Lato, sans-serif',
   secondary: 'Damion, cursive',
+  tertiary: 'Input Mono, monospace',
 }
 
 export const colors = {
   grey: '#bdbbbb',
-  beige: '#d8d0bb',
+  beige: '#f1ebe3',
+  beigeMedium: '#d6ccbf',
+  beigeGrey: '#bbb6af',
+  beigeDarkGrey: '#78746e',
   whitePure: '#ffffff',
   blackPure: '#000000',
-  blood: '#cc2626',
-  aqua: '#05889c',
-  eggplant: '#610f96',
 }
 
 export const breakpoints = {

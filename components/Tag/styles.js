@@ -12,7 +12,7 @@ export default css`
   }
 
   span {
-    color: ${colors.beige};
+    color: ${colors.beigeMedium};
     font-family: ${fonts.secondary};
     font-size: 12px;
   }

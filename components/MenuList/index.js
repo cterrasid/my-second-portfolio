@@ -1,32 +1,30 @@
 import { Fragment } from 'react'
-import { breakpoints, colors } from 'styles/theme'
-import useWindowsSize from 'hooks/useWindowsSize'
+import Link from 'next/link'
+import { breakpoints, colors, fonts } from 'styles/theme'
 
 export default function MenuList() {
-  const items = ['Inicio', 'Sobre mi', 'Stack', 'Proyectos', 'Contacto']
-  const firstItem = items[0]
+  const items = [
+    { link: '/', name: 'Inicio' },
+    { link: '/about', name: 'Sobre mi' },
+    { link: '/projects', name: 'Proyectos' },
+    { link: '/contact', name: 'Contacto' },
+  ]
 
-  const { isLaptop } = useWindowsSize()
   return (
     <Fragment>
       <nav>
-        {items.map((item, index) =>
-          item === firstItem ? (
-            <a key={item}>{item}</a>
-          ) : (
-            <>
-              {isLaptop && <span key={index}>/</span>}
-              <a key={item}>{item}</a>
-            </>
-          )
-        )}
+        {items.map(({ link, name }) => (
+          <Link href={link} key={name}>
+            <a>{name}</a>
+          </Link>
+        ))}
       </nav>
       <style jsx>{`
         nav {
-          align-items: center;
-          column-gap: 2px;
+          align-items: flex-end;
+          row-gap: 10px;
           display: flex;
-          flex-wrap: wrap;
+          flex-direction: column;
           justify-content: flex-end;
           margin: 0;
           max-width: 115px;
@@ -42,26 +40,18 @@ export default function MenuList() {
         a {
           cursor: pointer;
           display: flex;
+          font-family: monospace;
           font-size: 12px;
           letter-spacing: -1px;
-          text-transform: uppercase;
-          text-decoration: line-through;
-        }
-
-        a:hover {
+          text-transform: lowercase;
           text-decoration: none;
         }
 
-        a:hover:nth-of-type(2n + 1) {
-          color: ${colors.blood};
-        }
-
-        a:hover:nth-of-type(3n + 2) {
-          color: ${colors.aqua};
-        }
-
-        a:hover:nth-of-type(4n) {
-          color: ${colors.eggplant};
+        a:hover,
+        a:active,
+        a:focus {
+          text-decoration: overline;
+          font-weight: bold;
         }
 
         span {
@@ -71,27 +61,47 @@ export default function MenuList() {
 
         @media all and (min-width: ${breakpoints.tablet}) {
           nav {
+            flex-direction: row;
+            justify-content: space-evenly;
             max-width: unset;
-            top: 5%;
-            width: 21%;
+            top: 10%;
+            width: 40%;
           }
 
           a {
-            font-size: 18px;
+            font-size: 15px;
           }
         }
 
         @media all and (min-width: ${breakpoints.laptop}) {
           nav {
-            max-width: 235px;
-            justify-content: flex-start;
-            right: 8%;
-            top: 9%;
-            width: 23%;
+            align-items: center;
+            right: 0%;
+            width: 60%;
           }
 
           a {
-            font-size: 21px;
+            font-family: ${fonts.tertiary};
+            font-size: 18px;
+            letter-spacing: 0px;
+            text-transform: initial;
+          }
+
+          a:hover:last-of-type,
+          a:focus:last-of-type,
+          a:active:last-of-type {
+            color: ${colors.beige};
+          }
+
+          a:last-of-type {
+            color: ${colors.beige};
+            background: ${colors.blackPure};
+            border-radius: 9999px;
+            height: 35px;
+            padding: 5px 30px;
+            text-decoration: none;
+            text-transform: capitalize;
+            width: 140px;
           }
         }
       `}</style>
