@@ -2,9 +2,9 @@ import Tag from 'components/Tag'
 import styles from './styles'
 
 export default function HeaderText() {
-  const handleClick = () => {
-    console.log('cambiar')
-  }
+  // const handleClick = () => {
+  //   console.log('cambiar')
+  // }
 
   return (
     <section>
@@ -14,9 +14,9 @@ export default function HeaderText() {
       <Tag name="h1">
         <h1>Frontend Developer</h1>
       </Tag>
-      <Tag name="h3">
+      {/* <Tag name="h3">
         <h3 onClick={handleClick}>y si no te gusta...</h3>
-      </Tag>
+      </Tag> */}
       <style jsx>{styles}</style>
     </section>
   )
