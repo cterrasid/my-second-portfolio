@@ -13,13 +13,14 @@ export default function DotMenu() {
   }, [windowWidth])
 
   const props = useSpring({
-    transform: `scale(${show ? 1.5 : 1})`,
-    position: 'relative',
-    background: colors.blackPure,
+    background: colors.beige,
     borderRadius: '50%',
-    height: '100%',
-    width: '100%',
     config: { tension: 200, friction: 50 },
+    height: '100%',
+    mixBlendMode: 'difference',
+    position: 'relative',
+    transform: `scale(${show ? 1.5 : 1})`,
+    width: '100%',
   })
 
   const onClick = () => {
@@ -28,37 +29,66 @@ export default function DotMenu() {
 
   return (
     <Fragment>
-      {!isLaptop && (
-        <section onClick={onClick}>
-          <animated.span className="span" style={props} />
-        </section>
-      )}
-      {show ? <MenuList /> : false}
+      <section>
+        {!isLaptop && (
+          <span>
+            <animated.div onClick={onClick} style={props} />
+          </span>
+        )}
+        {show ? <MenuList /> : false}
+      </section>
       <style jsx>{`
         section {
-          position: absolute;
+          align-items: flex-end;
+          backdrop-filter: blur(1px);
+          background: ${colors.blackPure};
+          bottom: 40%;
+          display: flex;
+          flex-direction: column;
+          height: 125px;
+          mix-blend-mode: difference;
+          padding: 10px;
+          position: fixed;
           right: 10%;
-          bottom: 65%;
-          cursor: pointer;
-          width: 10px;
-          height: 10px;
-          display: grid;
-          place-items: center;
+          row-gap: 10px;
           z-index: 2;
+        }
+
+        span {
+          cursor: pointer;
+          display: grid;
+          height: 10px;
+          place-items: center;
+          width: 10px;
         }
 
         @media all and (min-width: ${breakpoints.tablet}) {
           section {
+            align-items: center;
+            backdrop-filter: blur(3px);
             bottom: unset;
+            column-gap: 20px;
+            flex-direction: row-reverse;
+            height: 60px;
+            padding-right: 40px;
+            right: 0;
+            top: 0;
+            width: 100%;
+          }
+
+          span {
             height: 15px;
-            right: 5%;
-            top: 10%;
             width: 15px;
           }
         }
 
         @media all and (min-width: ${breakpoints.laptop}) {
           section {
+            backdrop-filter: none;
+            height: 100px;
+          }
+
+          span {
             height: 20px;
             width: 20px;
           }

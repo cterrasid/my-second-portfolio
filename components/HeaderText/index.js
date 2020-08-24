@@ -2,10 +2,6 @@ import Tag from 'components/Tag'
 import { fonts, colors, breakpoints } from 'styles/theme'
 
 export default function HeaderText() {
-  // const handleClick = () => {
-  //   console.log('cambiar')
-  // }
-
   return (
     <section>
       <Tag name="h2">
@@ -14,53 +10,53 @@ export default function HeaderText() {
       <Tag name="h1">
         <h1>Frontend Developer</h1>
       </Tag>
-      {/* <Tag name="h3">
-        <h3 onClick={handleClick}>y si no te gusta...</h3>
-      </Tag> */}
+
       <style jsx>{`
         section {
-          display: flex;
-          flex: 1;
-          flex-direction: column;
-          justify-content: flex-start;
           align-items: flex-start;
           align-self: flex-end;
-          width: 70%;
-          max-width: 225px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          max-width: 208px;
+          position: absolute;
+          right: 30%;
+          top: 20px;
         }
 
         h1 {
-          margin: 0;
           font-size: 30px;
           font-weight: 900;
+          margin: 0;
         }
 
         h2 {
-          margin: 0;
           font-size: 12px;
           font-weight: 300;
+          margin: 0;
           width: 70px;
         }
 
         h3 {
-          margin: 0;
-          font-family: ${fonts.secondary};
+          align-self: flex-end;
+          animation: vibrate 0.5s infinite alternate;
           color: ${colors.grey};
+          cursor: pointer;
+          font-family: ${fonts.secondary};
           font-size: 14px;
           font-weight: normal;
-          align-self: flex-end;
-          cursor: pointer;
-          animation: vibrate 0.5s infinite alternate;
+          margin: 0;
         }
 
         @media all and (min-width: ${breakpoints.tablet}) {
           section {
-            padding-top: 0;
-            width: 60%;
+            bottom: 40px;
             max-width: 463px;
+            padding-top: 0;
             position: absolute;
             right: 0;
-            bottom: 40px;
+            top: unset;
+            width: 60%;
           }
 
           h1 {
@@ -68,8 +64,8 @@ export default function HeaderText() {
           }
 
           h2 {
-            font-size: 15px;
             align-self: flex-start;
+            font-size: 15px;
             width: unset;
           }
 
@@ -81,7 +77,9 @@ export default function HeaderText() {
         @media all and (min-width: ${breakpoints.laptop}) {
           section {
             bottom: 30%;
+            left: 18%;
             max-width: 615px;
+            right: unset;
           }
 
           h1 {
@@ -96,8 +94,8 @@ export default function HeaderText() {
         @media all and (min-width: ${breakpoints.desktop}) {
           section {
             bottom: 40%;
-            right: 20%;
             max-width: 690px;
+            right: 20%;
           }
 
           h1 {

@@ -1,6 +1,4 @@
 export const fonts = {
-  // base:
-  //   'Mulish, system-ui, -apple-system, BlinkMacSystemFont, Ubuntu, sans-serif',
   base: 'Lato, sans-serif',
   secondary: 'Damion, cursive',
   tertiary: 'Input Mono, monospace',
