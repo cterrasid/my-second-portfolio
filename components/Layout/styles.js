@@ -19,8 +19,4 @@ export const globalStyles = css.global`
     height: 100%;
     width: 100%;
   }
-
-  a {
-    color: ${colors.blackPure};
-  }
 `

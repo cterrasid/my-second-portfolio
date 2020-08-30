@@ -29,15 +29,12 @@ export default function MenuList() {
           margin: 0;
           max-width: 115px;
           padding: 0;
-          position: absolute;
-          right: 10%;
-          top: 37%;
+          mix-blend-mode: difference;
           transform: scale(1);
-          width: 35%;
-          z-index: 2;
         }
 
         a {
+          color: ${colors.beige};
           cursor: pointer;
           display: flex;
           font-family: monospace;
@@ -59,13 +56,12 @@ export default function MenuList() {
           font-weight: bold;
         }
 
-        @media all and (min-width: ${breakpoints.tablet}) {
+        @media all and (min-width: ${breakpoints.tablet}px) {
           nav {
             flex-direction: row;
             justify-content: space-evenly;
             max-width: unset;
-            top: 10%;
-            width: 40%;
+            width: 60%;
           }
 
           a {
@@ -73,7 +69,7 @@ export default function MenuList() {
           }
         }
 
-        @media all and (min-width: ${breakpoints.laptop}) {
+        @media all and (min-width: ${breakpoints.laptop}px) {
           nav {
             align-items: center;
             right: 0%;
@@ -90,12 +86,13 @@ export default function MenuList() {
           a:hover:last-of-type,
           a:focus:last-of-type,
           a:active:last-of-type {
-            color: ${colors.beige};
+            color: ${colors.blackPure};
+            background: ${colors.beige};
           }
 
           a:last-of-type {
-            color: ${colors.beige};
-            background: ${colors.blackPure};
+            color: ${colors.blackPure};
+            background: ${colors.beige};
             border-radius: 9999px;
             height: 35px;
             padding: 5px 30px;

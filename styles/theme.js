@@ -1,6 +1,4 @@
 export const fonts = {
-  // base:
-  //   'Mulish, system-ui, -apple-system, BlinkMacSystemFont, Ubuntu, sans-serif',
   base: 'Lato, sans-serif',
   secondary: 'Damion, cursive',
   tertiary: 'Input Mono, monospace',
@@ -17,7 +15,7 @@ export const colors = {
 }
 
 export const breakpoints = {
-  tablet: '768px',
-  laptop: '1024px',
-  desktop: '1440px',
+  tablet: 768,
+  laptop: 1024,
+  desktop: 1440,
 }

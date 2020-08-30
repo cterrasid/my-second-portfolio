@@ -1,5 +1,5 @@
 {
-  "name": "my-second-portfolio",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,7 +13,10 @@
     "next": "9.4.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-spring": "^8.0.27"
+    "react-scroll-horizontal": "^1.6.4",
+    "react-spring": "^8.0.27",
+    "react-use-gesture": "^7.0.15",
+    "vercel": "^20.0.0"
   },
   "devDependencies": {
     "eslint": "^7.7.0",
