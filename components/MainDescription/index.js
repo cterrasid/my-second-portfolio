@@ -30,7 +30,7 @@ export default function Description() {
           font-weight: bold;
         }
 
-        @media all and (min-width: ${breakpoints.laptop}) {
+        @media all and (min-width: ${breakpoints.laptop}px) {
           p {
             font-size: 30px;
           }

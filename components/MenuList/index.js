@@ -56,7 +56,7 @@ export default function MenuList() {
           font-weight: bold;
         }
 
-        @media all and (min-width: ${breakpoints.tablet}) {
+        @media all and (min-width: ${breakpoints.tablet}px) {
           nav {
             flex-direction: row;
             justify-content: space-evenly;
@@ -69,7 +69,7 @@ export default function MenuList() {
           }
         }
 
-        @media all and (min-width: ${breakpoints.laptop}) {
+        @media all and (min-width: ${breakpoints.laptop}px) {
           nav {
             align-items: center;
             right: 0%;
