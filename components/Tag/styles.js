@@ -1,5 +1,5 @@
 import css from 'styled-jsx/css'
-import { fonts, colors, breakpoints } from '../../styles/theme'
+import { fonts, colors, breakpoints } from 'styles/theme'
 
 export default css`
   section {
@@ -29,7 +29,7 @@ export default css`
     margin-left: 5px;
   }
 
-  @media all and (min-width: ${breakpoints.tablet}) {
+  @media all and (min-width: ${breakpoints.tablet}px) {
     section:last-child {
       align-self: flex-end;
       margin-right: 15px;

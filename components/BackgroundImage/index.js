@@ -41,6 +41,7 @@ export default function BackgroundImage() {
           display: flex;
           height: 100%;
           width: 100%;
+          z-index: 0;
         }
 
         div.body {

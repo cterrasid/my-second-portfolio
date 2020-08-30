@@ -48,7 +48,7 @@ export default function HeaderText() {
           margin: 0;
         }
 
-        @media all and (min-width: ${breakpoints.tablet}) {
+        @media all and (min-width: ${breakpoints.tablet}px) {
           section {
             bottom: 40px;
             max-width: 463px;
@@ -57,6 +57,7 @@ export default function HeaderText() {
             right: 0;
             top: unset;
             width: 60%;
+            z-index: 0;
           }
 
           h1 {
@@ -74,10 +75,10 @@ export default function HeaderText() {
           }
         }
 
-        @media all and (min-width: ${breakpoints.laptop}) {
+        @media all and (min-width: ${breakpoints.laptop}px) {
           section {
             bottom: 30%;
-            left: 18%;
+            left: 40%;
             max-width: 615px;
             right: unset;
           }
@@ -108,25 +109,6 @@ export default function HeaderText() {
 
           h3 {
             font-size: 24px;
-          }
-        }
-
-        @keyframes vibrate {
-          from {
-            transform: translateX(0px);
-            animation-timing-function: cubic-bezier(0.25, 0.01, 0.55, 0.16);
-          }
-          10% {
-            transform: translateX(2px);
-            animation-timing-function: cubic-bezier(0.52, 0.44, 0.47, 0.44);
-          }
-          20% {
-            transform: translateX(-2p) x;
-            animation-timing-function: cubic-bezier(0.53, 0.56, 0.48, 0.56);
-          }
-          30% {
-            transform: translateX(0px);
-            animation-timing-function: cubic-bezier(0.45, 0.84, 0.75, 0.99);
           }
         }
       `}</style>

@@ -62,7 +62,7 @@ export default function DotMenu() {
           width: 10px;
         }
 
-        @media all and (min-width: ${breakpoints.tablet}) {
+        @media all and (min-width: ${breakpoints.tablet}px) {
           section {
             align-items: center;
             backdrop-filter: blur(3px);
@@ -82,7 +82,7 @@ export default function DotMenu() {
           }
         }
 
-        @media all and (min-width: ${breakpoints.laptop}) {
+        @media all and (min-width: ${breakpoints.laptop}px) {
           section {
             backdrop-filter: none;
             height: 100px;
