@@ -65,6 +65,7 @@ export default function ProfileImage() {
         }
 
         img {
+          height: ${pxToRem({ px: 390 })};
           width: 100%;
           z-index: 2;
         }
@@ -133,6 +134,10 @@ export default function ProfileImage() {
             top: unset;
             transform: translateX(0);
             width: ${pxToRem({ px: 513 })};
+          }
+
+          img {
+            height: unset;
           }
 
           div.eye {
