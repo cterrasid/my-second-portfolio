@@ -8,6 +8,7 @@ export const globalStyles = css.global`
     margin: 0;
     font-family: ${fonts.base};
     background: ${colors.beige};
+    font-size: 16px;
   }
 
   * {

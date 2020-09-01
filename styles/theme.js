@@ -5,13 +5,14 @@ export const fonts = {
 }
 
 export const colors = {
-  grey: '#bdbbbb',
   beige: '#f1ebe3',
-  beigeMedium: '#d6ccbf',
-  beigeGrey: '#bbb6af',
   beigeDarkGrey: '#78746e',
-  whitePure: '#ffffff',
+  beigeGrey: '#bbb6af',
+  beigeMedium: '#d6ccbf',
   blackPure: '#000000',
+  eggplant: '#540a73',
+  grey: '#bdbbbb',
+  whitePure: '#ffffff',
 }
 
 export const breakpoints = {
