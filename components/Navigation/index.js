@@ -1,8 +1,8 @@
-import { Fragment } from 'react'
 import Link from 'next/link'
 import { breakpoints, colors, fonts } from 'styles/theme'
+import { pxToRem } from 'styles/utils'
 
-export default function MenuList() {
+export default function Navigation() {
   const items = [
     { link: '/', name: 'Inicio' },
     { link: '/about', name: 'Sobre mi' },
@@ -11,7 +11,7 @@ export default function MenuList() {
   ]
 
   return (
-    <Fragment>
+    <>
       <nav>
         {items.map(({ link, name }) => (
           <Link href={link} key={name}>
@@ -22,14 +22,17 @@ export default function MenuList() {
       <style jsx>{`
         nav {
           align-items: flex-end;
-          row-gap: 10px;
+          bottom: 0;
           display: flex;
           flex-direction: column;
-          justify-content: flex-end;
+          height: ${pxToRem({ px: 150 })};
+          justify-content: space-evenly;
           margin: 0;
-          max-width: 115px;
-          padding: 0;
+          max-width: ${pxToRem({ px: 115 })};
           mix-blend-mode: difference;
+          padding: 0;
+          position: absolute;
+          right: ${pxToRem({ px: 50 })};
           transform: scale(1);
         }
 
@@ -38,8 +41,8 @@ export default function MenuList() {
           cursor: pointer;
           display: flex;
           font-family: monospace;
-          font-size: 12px;
-          letter-spacing: -1px;
+          font-size: ${pxToRem({ px: 18 })};
+          letter-spacing: ${pxToRem({ px: -1 })};
           text-transform: lowercase;
           text-decoration: none;
         }
@@ -58,14 +61,12 @@ export default function MenuList() {
 
         @media all and (min-width: ${breakpoints.tablet}px) {
           nav {
+            align-items: center;
             flex-direction: row;
+            height: ${pxToRem({ px: 60 })};
             justify-content: space-evenly;
             max-width: unset;
             width: 60%;
-          }
-
-          a {
-            font-size: 15px;
           }
         }
 
@@ -78,7 +79,6 @@ export default function MenuList() {
 
           a {
             font-family: ${fonts.tertiary};
-            font-size: 18px;
             letter-spacing: 0px;
             text-transform: initial;
           }
@@ -93,15 +93,15 @@ export default function MenuList() {
           a:last-of-type {
             color: ${colors.blackPure};
             background: ${colors.beige};
-            border-radius: 9999px;
-            height: 35px;
-            padding: 5px 30px;
+            border-radius: ${pxToRem({ px: 100 })};
+            height: ${pxToRem({ px: 35 })};
+            padding: ${pxToRem({ px: 5 })} ${pxToRem({ px: 30 })};
             text-decoration: none;
             text-transform: capitalize;
-            width: 140px;
+            width: ${pxToRem({ px: 140 })};
           }
         }
       `}</style>
-    </Fragment>
+    </>
   )
 }
