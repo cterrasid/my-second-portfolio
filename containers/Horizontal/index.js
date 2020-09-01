@@ -7,8 +7,13 @@ export default function HorizontalContainer({ children, numberOfSections }) {
   const { isLaptop, windowWidth } = useWindowSize()
 
   useEffect(() => {
-    isLaptop && new HorizontalScroll()
+    setHorizontal()
   }, [windowWidth])
+
+  const setHorizontal = () => {
+    if (isLaptop) return new HorizontalScroll()
+    return false
+  }
 
   return (
     <>
