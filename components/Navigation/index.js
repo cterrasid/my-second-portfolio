@@ -25,7 +25,7 @@ export default function Navigation() {
           bottom: 0;
           display: flex;
           flex-direction: column;
-          height: ${pxToRem({ px: 150 })};
+          height: ${pxToRem({ px: 120 })};
           justify-content: space-evenly;
           margin: 0;
           max-width: ${pxToRem({ px: 115 })};
@@ -41,7 +41,7 @@ export default function Navigation() {
           cursor: pointer;
           display: flex;
           font-family: monospace;
-          font-size: ${pxToRem({ px: 18 })};
+          font-size: ${pxToRem({ px: 16 })};
           letter-spacing: ${pxToRem({ px: -1 })};
           text-transform: lowercase;
           text-decoration: none;
@@ -67,6 +67,10 @@ export default function Navigation() {
             justify-content: space-evenly;
             max-width: unset;
             width: 60%;
+          }
+
+          a {
+            font-size: ${pxToRem({ px: 18 })};
           }
         }
 

@@ -75,7 +75,7 @@ export default function HeaderText() {
             position: absolute;
             padding: 0;
             top: 50%;
-
+            left: 40%;
             width: ${pxToRem({ px: 510 })};
           }
 
