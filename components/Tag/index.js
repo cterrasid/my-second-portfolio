@@ -37,11 +37,15 @@ export default function Tag({ name, children }) {
             align-self: flex-end;
             margin-right: ${pxToRem({ px: 15 })};
           }
+
+          span {
+            font-size: ${pxToRem({ px: 18 })};
+          }
         }
 
         @media all and (min-width: ${breakpoints.laptop}px) {
           span {
-            font-size: ${pxToRem({ px: 18 })};
+            font-size: ${pxToRem({ px: 20 })};
           }
         }
       `}</style>
