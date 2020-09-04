@@ -5,7 +5,7 @@ import { pxToRem } from 'styles/utils'
 export default function Navigation() {
   const items = [
     { link: '/', name: 'Inicio' },
-    { link: '/about', name: 'Sobre mi' },
+    { link: '/about-me', name: 'Sobre mi' },
     { link: '/projects', name: 'Proyectos' },
     { link: '/contact', name: 'Contacto' },
   ]

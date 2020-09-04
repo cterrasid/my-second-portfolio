@@ -1,6 +1,7 @@
 import React from 'react'
 import Tag from 'components/Tag'
 import { pxToRem } from 'styles/utils'
+import { breakpoints } from 'styles/theme'
 
 export default function SectionTitle({
   title,
@@ -24,6 +25,18 @@ export default function SectionTitle({
 
         div {
           width: ${containerWidth};
+        }
+
+        @media all and (min-width: ${breakpoints.tablet}px) {
+          h1 {
+            font-size: ${pxToRem({ px: 70 })};
+          }
+        }
+
+        @media all and (min-width: ${breakpoints.laptop}px) {
+          h1 {
+            font-size: ${pxToRem({ px: 75 })};
+          }
         }
       `}</style>
     </>
