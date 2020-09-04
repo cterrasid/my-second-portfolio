@@ -34,9 +34,9 @@ export default function HeaderText() {
         }
 
         h1 {
-          font-size: ${pxToRem({ px: 26 })};
+          font-size: ${pxToRem({ px: 28 })};
           margin: 0;
-          width: ${pxToRem({ px: 140 })};
+          width: fit-content;
         }
 
         h1 > span {
@@ -61,7 +61,7 @@ export default function HeaderText() {
 
           h1 {
             font-size: ${pxToRem({ px: 40 })};
-            width: unset;
+            width: max-content;
           }
 
           h2 {
