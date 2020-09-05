@@ -1,6 +1,7 @@
 import { colors, breakpoints } from 'styles/theme'
 import { pxToRem } from 'styles/utils'
 import Tag from 'components/Tag'
+import SocialNetworks from 'components/SocialNetworks'
 
 export default function HeaderText() {
   return (
@@ -17,13 +18,13 @@ export default function HeaderText() {
         <Tag name="h2">
           <h2>Frontend Developer</h2>
         </Tag>
+        <SocialNetworks />
       </section>
       <style jsx>{`
         section {
           align-items: flex-start;
           display: flex;
           flex-direction: column;
-          height: 55%;
           justify-content: flex-end;
           width: ${pxToRem({ px: 230 })};
         }
@@ -34,9 +35,9 @@ export default function HeaderText() {
         }
 
         h1 {
-          font-size: ${pxToRem({ px: 26 })};
+          font-size: ${pxToRem({ px: 28 })};
           margin: 0;
-          width: ${pxToRem({ px: 140 })};
+          width: fit-content;
         }
 
         h1 > span {
@@ -61,7 +62,7 @@ export default function HeaderText() {
 
           h1 {
             font-size: ${pxToRem({ px: 40 })};
-            width: unset;
+            width: max-content;
           }
 
           h2 {
@@ -77,6 +78,7 @@ export default function HeaderText() {
             top: 50%;
             left: 40%;
             width: ${pxToRem({ px: 510 })};
+            z-index: 1;
           }
 
           h1 {

@@ -3,11 +3,12 @@ import { pxToRem } from 'styles/utils'
 
 export default function Tag({ name, children }) {
   return (
-    <section>
-      <span>{`<${name}>`}</span>
-      <div>{children}</div>
-      <span>{`</${name}>`}</span>
-
+    <>
+      <section>
+        <span>{`<${name}>`}</span>
+        <div>{children}</div>
+        <span>{`</${name}>`}</span>
+      </section>
       <style jsx>{`
         section {
           display: grid;
@@ -32,6 +33,10 @@ export default function Tag({ name, children }) {
           margin-left: ${pxToRem({ px: 5 })};
         }
 
+        div {
+          grid-area: 'content';
+        }
+
         @media all and (min-width: ${breakpoints.tablet}px) {
           section:last-child {
             align-self: flex-end;
@@ -49,6 +54,6 @@ export default function Tag({ name, children }) {
           }
         }
       `}</style>
-    </section>
+    </>
   )
 }
