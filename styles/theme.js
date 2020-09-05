@@ -11,6 +11,7 @@ export const colors = {
   beigeMedium: '#d6ccbf',
   blackPure: '#000000',
   eggplant: '#540a73',
+  greyEggplant: '#6d5179',
   grey: '#bdbbbb',
   whitePure: '#ffffff',
 }

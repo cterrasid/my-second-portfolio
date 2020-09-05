@@ -1,9 +1,11 @@
 import { useRef } from 'react'
 import { pxToRem } from 'styles/utils'
+import useImageByDevice from 'hooks/useImageByDevice'
 import { colors, breakpoints } from 'styles/theme'
 
 export default function ProfileImage() {
-  const image = '/without-eyes-complete.png'
+  const image = useImageByDevice()
+
   const eyeLeftRef = useRef()
   const eyeRightRef = useRef()
 
@@ -42,9 +44,7 @@ export default function ProfileImage() {
         section {
           align-items: flex-start;
           display: flex;
-          height: 100%;
           justify-content: center;
-          width: 100%;
         }
 
         section > div:first-of-type {
@@ -120,6 +120,11 @@ export default function ProfileImage() {
         }
 
         @media all and (min-width: ${breakpoints.laptop}px) {
+          section {
+            height: 100%;
+            width: 100%;
+          }
+
           section > div:first-of-type {
             border-radius: 0;
             height: 100%;
