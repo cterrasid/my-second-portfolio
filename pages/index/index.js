@@ -1,8 +1,12 @@
 import Head from 'next/head'
-import Presentation from 'components/MainPresentation'
+import HeaderText from 'components/HeaderText'
+import ProfileImage from 'components/ProfileImage'
+import useWindowSize from 'hooks/useWindowsSize'
 import { colors, breakpoints } from 'styles/theme'
 
 export default function Home() {
+  const { isLaptop } = useWindowSize()
+
   return (
     <>
       <Head>
@@ -10,7 +14,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Presentation />
+        <HeaderText />
+        {isLaptop && <ProfileImage />}
       </main>
 
       <style jsx>{`
